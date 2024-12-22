@@ -12,8 +12,7 @@
             line-height: 1;
             box-sizing: border-box;
             background-color: #f8f9fa;
-            position: relative;
-            overflow: hidden;
+            overflow-y: auto; /* Mengaktifkan scrolling vertikal */
         }
 
         h1 {
@@ -39,10 +38,6 @@
             flex-wrap: wrap;
         }
 
-        .kkm-section label {
-            margin-right: px;
-        }
-
         .form-container {
             display: flex;
             line-height: 2.5;
@@ -51,16 +46,6 @@
             margin: 2px auto;
             max-width: 90%;
             flex-wrap: wrap;
-        }
-
-        .form-group {
-            display: flex;
-            justify-content: ;
-            align-items: ;
-        }
-
-        .form-group label {
-            width: 120px;
         }
 
         input[type="text"], input[type="number"] {
@@ -121,51 +106,12 @@
             background-color: #0056b3;
         }
 
-        .save-btn {
-            background-color: #28a745;
-        }
-
-        .save-btn:hover {
-            background-color: #218838;
-        }
-
-        .edit-btn, .delete-btn {
-            padding: 5px 10px;
-            font-size: 12px;
-            cursor: pointer;
-            border-radius: 5px;
-            margin: 2px;
-        }
-
-        .edit-btn {
-            background-color: #ffc107;
-            color: black;
-        }
-
-        .delete-btn {
-            background-color: #dc3545;
-            color: white;
-        }
-
-        .edit-btn:hover {
-            background-color: #e0a800;
-        }
-
-        .delete-btn:hover {
-            background-color: #c82333;
-        }
-
         @media (max-width: 600px) {
             h1 {
                 font-size: 24px;
             }
 
             .subheading {
-                font-size: 14px;
-            }
-
-            .kkm-section label,
-            .form-group label {
                 font-size: 14px;
             }
 
@@ -207,8 +153,11 @@
   </style>
 </head>
 <body>
-  <div class="rotating-text">Versi Uji Coba Desain By Karman Angwarmase</div>
-  <h1>SMA Muhammadiyah 1 P. Morotai</h1>
+  <div class="rotating-text">SMPN Unggulan 1 Pulau Morotai</div>
+  <h1>
+    <img src="tini.png" width="55" alt="Logo">
+    SMPN Unggulan 1 Pulau Morotai
+  </h1>
   <div class="subheading">
     Nilai Semester 1 Ganjil/ Thn.2024-2025
   </div>
@@ -286,8 +235,6 @@ function tambahData() {
 
         updateTable();
 
-        // Commented out the form reset to prevent clearing the input fields
-        // document.getElementById('dataForm').reset();
     } else {
         alert('Semua field harus diisi dengan benar!');
     }
@@ -344,51 +291,59 @@ function tambahData() {
             }
         }
 
-        function downloadPDF() {
-            const { jsPDF } = window.jspdf;
-            const doc = new jsPDF();
+       function downloadPDF() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
 
-            const mapel = document.getElementById('mapel-kkm').value;
-            const kelas = document.getElementById('kelas').value;
-            const kkm = document.getElementById('kkm').value;
+    const mapel = document.getElementById('mapel-kkm').value;
+    const kelas = document.getElementById('kelas').value;
+    const kkm = document.getElementById('kkm').value;
 
-            doc.setFontSize(16);
-            doc.text("SMA Muhammadiyah 1 P. Morotai", 105, 10, null, null, 'center');
-            doc.setFontSize(13);
-            doc.text("Nilai Semester 1 Ganjil/ Thn.2024-2025", 105, 16, null, null, 'center');
-            doc.setFontSize(12);
-            doc.text(`Mata Pelajaran: ${mapel}`, 10, 30);
-            doc.text(`Kelas: ${kelas}`, 10, 35);
-            doc.text(`KKM: ${kkm}`, 10, 40);
+    doc.setFontSize(16);
+    doc.text("SMPN Unggulan 1 Pulau Morotai", 105, 10, null, null, 'center');
+    doc.setFontSize(13);
+    doc.text("Nilai Semester 1 Ganjil/ Thn.2024-2025", 105, 16, null, null, 'center');
+    doc.setFontSize(12);
+    doc.text(`Mata Pelajaran: ${mapel}`, 10, 30);
+    doc.text(`Kelas: ${kelas}`, 10, 35);
+    doc.text(`KKM: ${kkm}`, 10, 40);
 
-            const headers = [["No", "Nama", "Nilai", "Predikat", "Deskripsi"]];
-            const rows = dataSiswa.map((data, index) => [
-                index + 1,
-                data.nama,
-                data.nilai,
-                data.predikat,
-                data.deskripsiGabungan
-            ]);
+    const headers = [["No", "Nama", "Nilai", "Predikat", "Deskripsi"]];
+    const rows = dataSiswa.map((data, index) => [
+        index + 1,
+        data.nama,
+        data.nilai,
+        data.predikat,
+        data.deskripsiGabungan
+    ]);
 
-            doc.autoTable({
-                head: headers,
-                body: rows,
-                startY: 50,
-                theme: 'grid',
-                styles: { fontSize: 10 },
-            });
+    doc.autoTable({
+        head: headers,
+        body: rows,
+        startY: 50,
+        theme: 'grid',
+        styles: { fontSize: 10 },
+    });
 
-            doc.save('nilai_semester.pdf');
-        }
+    const fileName = prompt("Masukkan nama file untuk PDF:", "nilai_semester.pdf");
+    if (fileName) {
+        doc.save(fileName.endsWith('.pdf') ? fileName : `${fileName}.pdf`);
+    }
+}
 
-        function exportHTML() {
-            const tableHTML = document.getElementById('dataTable').outerHTML;
-            const blob = new Blob([tableHTML], { type: 'text/html' });
-            const link = document.createElement('a');
-            link.href = URL.createObjectURL(blob);
-            link.download = 'data_siswa.html';
-            link.click();
-        }
+       function exportHTML() {
+    const tableHTML = document.getElementById('dataTable').outerHTML;
+    const blob = new Blob([tableHTML], { type: 'text/html' });
+
+    const fileName = prompt("Masukkan nama file untuk HTML:", "data_siswa.html");
+    if (fileName) {
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = fileName.endsWith('.html') ? fileName : `${fileName}.html`;
+        link.click();
+    }
+}
+
 
         function importHTML() {
             const input = document.createElement('input');
