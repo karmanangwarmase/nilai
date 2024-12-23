@@ -6,6 +6,7 @@
   <title>Karman Angwarmase</title>
   <style>
         body {
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -38,6 +39,10 @@
             flex-wrap: wrap;
         }
 
+        .kkm-section label {
+            margin-right: px;
+        }
+
         .form-container {
             display: flex;
             line-height: 2.5;
@@ -46,6 +51,16 @@
             margin: 2px auto;
             max-width: 90%;
             flex-wrap: wrap;
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: ;
+            align-items: ;
+        }
+
+        .form-group label {
+            width: 120px;
         }
 
         input[type="text"], input[type="number"] {
@@ -106,12 +121,51 @@
             background-color: #0056b3;
         }
 
+        .save-btn {
+            background-color: #28a745;
+        }
+
+        .save-btn:hover {
+            background-color: #218838;
+        }
+
+        .edit-btn, .delete-btn {
+            padding: 5px 10px;
+            font-size: 12px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 2px;
+        }
+
+        .edit-btn {
+            background-color: #ffc107;
+            color: black;
+        }
+
+        .delete-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .edit-btn:hover {
+            background-color: #e0a800;
+        }
+
+        .delete-btn:hover {
+            background-color: #c82333;
+        }
+
         @media (max-width: 600px) {
             h1 {
                 font-size: 24px;
             }
 
             .subheading {
+                font-size: 14px;
+            }
+
+            .kkm-section label,
+            .form-group label {
                 font-size: 14px;
             }
 
@@ -150,16 +204,31 @@
                 transform: translate(-50%, -50%) rotate(360deg);
             }
         }
+
+
+  <div class="rotating-text">SMPN Unggulan 1 Pulau Morotai</div>
+  <title>Gambar dan Teks Sejajar</title>
+  <style>
+    h1 {
+      display: flex;
+      align-items: center; /* Menyelaraskan item secara vertikal */
+      gap: 8px; /* Jarak antara gambar dan teks */
+      font-size: 24px;
+      font-family: Arial, sans-serif;
+    }
+
+    img {
+      vertical-align: middle; /* Menyelaraskan gambar dengan teks */
+    }
   </style>
 </head>
 <body>
-  <div class="rotating-text">SMPN Unggulan 1 Pulau Morotai</div>
   <h1>
-    <img src="tini.png" width="55" alt="Logo">
     SMPN Unggulan 1 Pulau Morotai
   </h1>
+</body>
   <div class="subheading">
-    Nilai Semester 1 Ganjil/ Thn.2024-2025
+ Nilai Semester 1 Ganjil/ Thn.2024-2025
   </div>
   <div class="kkm-section">
     <label for="mapel-kkm">Mata Pelajaran:</label> 
@@ -235,6 +304,8 @@ function tambahData() {
 
         updateTable();
 
+        // Commented out the form reset to prevent clearing the input fields
+        // document.getElementById('dataForm').reset();
     } else {
         alert('Semua field harus diisi dengan benar!');
     }
@@ -378,4 +449,6 @@ function tambahData() {
         }
   </script>
 </body>
-</html>
+</html> 
+
+ 
