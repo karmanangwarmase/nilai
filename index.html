@@ -5,252 +5,192 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Karman Angwarmase</title>
   <style>
-        body {
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1;
-            box-sizing: border-box;
-            background-color: #f8f9fa;
-            overflow-y: auto; /* Mengaktifkan scrolling vertikal */
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 5px;
-            color: #333;
-        }
-
-        .subheading {
-            text-align: center;
-            font-size: 18px;
-            color: gray;
-            margin-bottom: 20px;
-        }
-
-        .kkm-section {
-            display: flex;
-            line-height: 0.5;
-            justify-content: center;
-            gap: 10px;
-            margin: 10px auto;
-            max-width: 80%;
-            flex-wrap: wrap;
-        }
-
-        .kkm-section label {
-            margin-right: px;
-        }
-
-        .form-container {
-            display: flex;
-            line-height: 2.5;
-            justify-content: center;
-            gap: 5px;
-            margin: 2px auto;
-            max-width: 90%;
-            flex-wrap: wrap;
-        }
-
-        .form-group {
-            display: flex;
-            justify-content: ;
-            align-items: ;
-        }
-
-        .form-group label {
-            width: 120px;
-        }
-
-        input[type="text"], input[type="number"] {
-            padding: 8px;
-            width: 100%;
-            max-width: 200px;
-            box-sizing: border-box;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-
-        .table-container {
-            margin: 20px auto;
-            overflow-x: auto;
-            max-width: 90%;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-            background-color: white;
-        }
-
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-
-        th {
-            background-color: #007bff;
-            color: white;
-        }
-
-        th, td {
-            padding: 8px;
-            text-align: center;
-            word-wrap: break-word;
-        }
-
-        .download-section, .save-section {
-            margin: 20px auto;
-            text-align: center;
-        }
-
-        button {
-            padding: 10px 15px;
-            font-size: 14px;
-            cursor: pointer;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            text-align: center;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-
-        .save-btn {
-            background-color: #28a745;
-        }
-
-        .save-btn:hover {
-            background-color: #218838;
-        }
-
-        .edit-btn, .delete-btn {
-            padding: 5px 10px;
-            font-size: 12px;
-            cursor: pointer;
-            border-radius: 5px;
-            margin: 2px;
-        }
-
-        .edit-btn {
-            background-color: #ffc107;
-            color: black;
-        }
-
-        .delete-btn {
-            background-color: #dc3545;
-            color: white;
-        }
-
-        .edit-btn:hover {
-            background-color: #e0a800;
-        }
-
-        .delete-btn:hover {
-            background-color: #c82333;
-        }
-
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 24px;
-            }
-
-            .subheading {
-                font-size: 14px;
-            }
-
-            .kkm-section label,
-            .form-group label {
-                font-size: 14px;
-            }
-
-            input[type="text"], input[type="number"] {
-                max-width: 100%;
-            }
-
-            table {
-                font-size: 12px;
-            }
-
-            th, td {
-                padding: 6px;
-            }
-        }
-
-        /* Rotating text background */
-        .rotating-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 30px;
-            font-weight: bold;
-            color: rgba(0, 0, 0, 0.1);
-            white-space: nowrap;
-            animation: rotateText 10s linear infinite;
-            z-index: -1;
-        }
-
-        @keyframes rotateText {
-            0% {
-                transform: translate(-50%, -50%) rotate(0deg);
-            }
-            100% {
-                transform: translate(-50%, -50%) rotate(360deg);
-            }
-        }
-
-
-  <div class="rotating-text">SMAS Muhammadiyah 1 P.M</div>
-  <title>Gambar dan Teks Sejajar</title>
-  <style>
-    h1 {
-      display: flex;
-      align-items: center; /* Menyelaraskan item secara vertikal */
-      gap: 8px; /* Jarak antara gambar dan teks */
-      font-size: 24px;
+    body {
       font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      box-sizing: border-box;
+      background-color: #f8f9fa;
     }
 
-    img {
-      vertical-align: middle; /* Menyelaraskan gambar dengan teks */
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #333;
+      font-size: 28px;
+    }
+
+    .subheading {
+      text-align: center;
+      font-size: 18px;
+      color: gray;
+      margin-bottom: 20px;
+    }
+
+    .kkm-section, .form-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px auto;
+      max-width: 90%;
+      flex-wrap: wrap;
+    }
+
+    .form-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .form-group label {
+      width: 120px;
+      font-size: 14px;
+    }
+
+    input[type="text"], input[type="number"] {
+      padding: 8px;
+      width: 100%;
+      max-width: 200px;
+      box-sizing: border-box;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    .table-container {
+      margin: 20px auto;
+      overflow-x: auto;
+      max-width: 90%;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      background-color: white;
+    }
+
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+      word-wrap: break-word;
+    }
+
+    .download-section, .save-section {
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    button {
+      padding: 10px 15px;
+      font-size: 14px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .save-btn {
+      background-color: #28a745;
+    }
+
+    .save-btn:hover {
+      background-color: #218838;
+    }
+
+    .edit-btn, .delete-btn {
+      padding: 5px 10px;
+      font-size: 12px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin: 2px;
+    }
+
+    .edit-btn {
+      background-color: #ffc107;
+      color: black;
+    }
+
+    .delete-btn {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    .edit-btn:hover {
+      background-color: #e0a800;
+    }
+
+    .delete-btn:hover {
+      background-color: #c82333;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 24px;
+      }
+
+      .subheading {
+        font-size: 14px;
+      }
+
+      .form-group label {
+        width: 100px;
+        font-size: 12px;
+      }
+
+      input[type="text"], input[type="number"] {
+        max-width: 100%;
+      }
+
+      table {
+        font-size: 12px;
+      }
+
+      th, td {
+        padding: 8px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>
-    SMAS Muhammadiyah 1 P.M
-  </h1>
-</body>
-  <div class="subheading">
- Nilai Semester 1 Ganjil/ Thn.2024-2025
-  </div>
+  <h1>SMAS Muhammadiyah 1 P.M</h1>
+  <div class="subheading">Nilai Semester 1 Ganjil/ Thn.2024-2025</div>
   <div class="kkm-section">
-    <label for="mapel-kkm">Mata Pelajaran:</label> 
-    <input type="text" id="mapel-kkm" name="mapel-kkm" required=""> 
-    <label for="kelas">Kelas:</label> 
-    <input type="text" id="kelas" name="kelas" required=""> 
-    <label for="kkm">KKM:</label> 
-    <input type="number" id="kkm" name="kkm" value="75" required="">
+    <label for="mapel-kkm">Mata Pelajaran:</label>
+    <input type="text" id="mapel-kkm" name="mapel-kkm" required>
+    <label for="kelas">Kelas:</label>
+    <input type="text" id="kelas" name="kelas" required>
+    <label for="kkm">KKM:</label>
+    <input type="number" id="kkm" name="kkm" value="75" required>
   </div>
   <form id="dataForm" name="dataForm">
     <div class="form-container">
       <div class="form-group">
-        <label for="nama">Nama:</label> 
-        <input type="text" id="nama" name="nama" required="">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required>
       </div>
       <div class="form-group">
-        <label for="nilai">Nilai:</label> 
-        <input type="number" id="nilai" name="nilai" required="">
+        <label for="nilai">Nilai:</label>
+        <input type="number" id="nilai" name="nilai" required>
       </div>
       <div class="form-group">
-        <label for="deskripsi">Deskripsi:</label> 
-        <input type="text" id="deskripsi" name="deskripsi" required="">
+        <label for="deskripsi">Deskripsi:</label>
+        <input type="text" id="deskripsi" name="deskripsi" required>
       </div>
     </div>
     <button type="button" onclick="tambahData()">Tambah Data</button>
@@ -281,174 +221,168 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
   <script>
-        let dataSiswa = [];
-        let editIndex = -1;
+    let dataSiswa = [];
+    let editIndex = -1;
 
-function tambahData() {
-    const nama = document.getElementById('nama').value;
-    const nilai = parseFloat(document.getElementById('nilai').value);
-    const deskripsiInput = document.getElementById('deskripsi').value;
-    const kkm = parseInt(document.getElementById('kkm').value);
+    function tambahData() {
+      const nama = document.getElementById('nama').value;
+      const nilai = parseFloat(document.getElementById('nilai').value);
+      const deskripsiInput = document.getElementById('deskripsi').value;
+      const kkm = parseInt(document.getElementById('kkm').value);
 
-    if (nama && !isNaN(nilai)) {
+      if (nama && !isNaN(nilai)) {
         const deskripsi = hitungDeskripsi(nilai);
         const predikat = hitungPredikat(nilai);
         const deskripsiGabungan = `${deskripsi}, ${deskripsiInput}`;
 
         if (editIndex === -1) {
-            dataSiswa.push({ nama, nilai, predikat, deskripsiGabungan });
+          dataSiswa.push({ nama, nilai, predikat, deskripsiGabungan });
         } else {
-            dataSiswa[editIndex] = { nama, nilai, predikat, deskripsiGabungan };
-            editIndex = -1;
+          dataSiswa[editIndex] = { nama, nilai, predikat, deskripsiGabungan };
+          editIndex = -1;
         }
 
         updateTable();
-
-        // Commented out the form reset to prevent clearing the input fields
-        // document.getElementById('dataForm').reset();
-    } else {
+      } else {
         alert('Semua field harus diisi dengan benar!');
+      }
     }
-}
 
-        function hitungPredikat(nilai) {
-            if (nilai >= 90) return 'A';
-            if (nilai >= 80) return 'B';
-            if (nilai >= 70) return 'C';
-            if (nilai >= 60) return 'D';
-            return 'E';
-        }
+    function hitungPredikat(nilai) {
+      if (nilai >= 90) return 'A';
+      if (nilai >= 80) return 'B';
+      if (nilai >= 70) return 'C';
+      if (nilai >= 60) return 'D';
+      return 'E';
+    }
 
-        function hitungDeskripsi(nilai) {
-            if (nilai >= 85) return 'Sangat Baik';
-            if (nilai >= 70) return 'Baik';
-            if (nilai >= 55) return 'Cukup';
-            return 'Kurang';
-        }
+    function hitungDeskripsi(nilai) {
+      if (nilai >= 85) return 'Sangat Baik';
+      if (nilai >= 70) return 'Baik';
+      if (nilai >= 55) return 'Cukup';
+      return 'Kurang';
+    }
 
-        function updateTable() {
-            const tableBody = document.getElementById('dataTable').querySelector('tbody');
-            tableBody.innerHTML = '';
+    function updateTable() {
+      const tableBody = document.getElementById('dataTable').querySelector('tbody');
+      tableBody.innerHTML = '';
 
-            dataSiswa.forEach((data, index) => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${index + 1}</td>
-                    <td>${data.nama}</td>
-                    <td>${data.nilai}</td>
-                    <td>${data.predikat}</td>
-                    <td>${data.deskripsiGabungan}</td>
-                    <td>
-                        <button class="edit-btn" onclick="editData(${index})">Edit</button>
-                        <button class="delete-btn" onclick="deleteData(${index})">Delete</button>
-                    </td>
-                `;
-                tableBody.appendChild(row);
-            });
-        }
+      dataSiswa.forEach((data, index) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${index + 1}</td>
+          <td>${data.nama}</td>
+          <td>${data.nilai}</td>
+          <td>${data.predikat}</td>
+          <td>${data.deskripsiGabungan}</td>
+          <td>
+            <button class="edit-btn" onclick="editData(${index})">Edit</button>
+            <button class="delete-btn" onclick="deleteData(${index})">Delete</button>
+          </td>
+        `;
+        tableBody.appendChild(row);
+      });
+    }
 
-        function editData(index) {
-            const data = dataSiswa[index];
-            document.getElementById('nama').value = data.nama;
-            document.getElementById('nilai').value = data.nilai;
-            document.getElementById('deskripsi').value = data.deskripsiGabungan.split(', ')[1];
-            editIndex = index;
-        }
+    function editData(index) {
+      const data = dataSiswa[index];
+      document.getElementById('nama').value = data.nama;
+      document.getElementById('nilai').value = data.nilai;
+      document.getElementById('deskripsi').value = data.deskripsiGabungan.split(', ')[1];
+      editIndex = index;
+    }
 
-        function deleteData(index) {
-            if (confirm('Apakah Anda yakin ingin menghapus data ini?')) {
-                dataSiswa.splice(index, 1);
-                updateTable();
-            }
-        }
+    function deleteData(index) {
+      if (confirm('Apakah Anda yakin ingin menghapus data ini?')) {
+        dataSiswa.splice(index, 1);
+        updateTable();
+      }
+    }
 
-       function downloadPDF() {
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
+    function downloadPDF() {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
 
-    const mapel = document.getElementById('mapel-kkm').value;
-    const kelas = document.getElementById('kelas').value;
-    const kkm = document.getElementById('kkm').value;
+      const mapel = document.getElementById('mapel-kkm').value;
+      const kelas = document.getElementById('kelas').value;
+      const kkm = document.getElementById('kkm').value;
 
-    doc.setFontSize(16);
-    doc.text("SMPN Unggulan 1 Pulau Morotai", 105, 10, null, null, 'center');
-    doc.setFontSize(13);
-    doc.text("Nilai Semester 1 Ganjil/ Thn.2024-2025", 105, 16, null, null, 'center');
-    doc.setFontSize(12);
-    doc.text(`Mata Pelajaran: ${mapel}`, 10, 30);
-    doc.text(`Kelas: ${kelas}`, 10, 35);
-    doc.text(`KKM: ${kkm}`, 10, 40);
+      doc.setFontSize(16);
+      doc.text("SMAS Muhammadiyah 1 P.M", 105, 10, null, null, 'center');
+      doc.setFontSize(13);
+      doc.text("Nilai Semester 1 Ganjil/ Thn.2024-2025", 105, 16, null, null, 'center');
+      doc.setFontSize(12);
+      doc.text(`Mata Pelajaran: ${mapel}`, 10, 30);
+      doc.text(`Kelas: ${kelas}`, 10, 35);
+      doc.text(`KKM: ${kkm}`, 10, 40);
 
-    const headers = [["No", "Nama", "Nilai", "Predikat", "Deskripsi"]];
-    const rows = dataSiswa.map((data, index) => [
+      const headers = [["No", "Nama", "Nilai", "Predikat", "Deskripsi"]];
+      const rows = dataSiswa.map((data, index) => [
         index + 1,
         data.nama,
         data.nilai,
         data.predikat,
         data.deskripsiGabungan
-    ]);
+      ]);
 
-    doc.autoTable({
+      doc.autoTable({
         head: headers,
         body: rows,
         startY: 50,
         theme: 'grid',
         styles: { fontSize: 10 },
-    });
+      });
 
-    const fileName = prompt("Masukkan nama file untuk PDF:", "nilai_semester.pdf");
-    if (fileName) {
+      const fileName = prompt("Masukkan nama file untuk PDF:", "nilai_semester.pdf");
+      if (fileName) {
         doc.save(fileName.endsWith('.pdf') ? fileName : `${fileName}.pdf`);
+      }
     }
-}
 
-       function exportHTML() {
-    const tableHTML = document.getElementById('dataTable').outerHTML;
-    const blob = new Blob([tableHTML], { type: 'text/html' });
+    function exportHTML() {
+      const tableHTML = document.getElementById('dataTable').outerHTML;
+      const blob = new Blob([tableHTML], { type: 'text/html' });
 
-    const fileName = prompt("Masukkan nama file untuk HTML:", "data_siswa.html");
-    if (fileName) {
+      const fileName = prompt("Masukkan nama file untuk HTML:", "data_siswa.html");
+      if (fileName) {
         const link = document.createElement('a');
         link.href = URL.createObjectURL(blob);
         link.download = fileName.endsWith('.html') ? fileName : `${fileName}.html`;
         link.click();
+      }
     }
-}
 
+    function importHTML() {
+      const input = document.createElement('input');
+      input.type = 'file';
+      input.accept = '.html';
+      input.onchange = (event) => {
+        const file = event.target.files[0];
+        const reader = new FileReader();
+        reader.onload = () => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(reader.result, 'text/html');
+          const tableRows = doc.querySelectorAll('table tbody tr');
 
-        function importHTML() {
-            const input = document.createElement('input');
-            input.type = 'file';
-            input.accept = '.html';
-            input.onchange = (event) => {
-                const file = event.target.files[0];
-                const reader = new FileReader();
-                reader.onload = () => {
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(reader.result, 'text/html');
-                    const tableRows = doc.querySelectorAll('table tbody tr');
-                    
-                    dataSiswa = [];
-                    tableRows.forEach((row) => {
-                        const cells = row.querySelectorAll('td');
-                        if (cells.length >= 5) {
-                            dataSiswa.push({
-                                nama: cells[1].textContent,
-                                nilai: parseFloat(cells[2].textContent),
-                                predikat: cells[3].textContent,
-                                deskripsiGabungan: cells[4].textContent
-                            });
-                        }
-                    });
+          dataSiswa = [];
+          tableRows.forEach((row) => {
+            const cells = row.querySelectorAll('td');
+            if (cells.length >= 5) {
+              dataSiswa.push({
+                nama: cells[1].textContent,
+                nilai: parseFloat(cells[2].textContent),
+                predikat: cells[3].textContent,
+                deskripsiGabungan: cells[4].textContent
+              });
+            }
+          });
 
-                    updateTable();
-                };
-                reader.readAsText(file);
-            };
-            input.click();
-        }
+          updateTable();
+        };
+        reader.readAsText(file);
+      };
+      input.click();
+    }
   </script>
 </body>
-</html> 
-
- 
+</html>
